@@ -60,16 +60,16 @@
             </div>
             <div class="row">
                 <label for="department">Department:</label>
-                <div class="check">
-                    <input type="checkbox" id="hr" name="hr" value="hr" required>
+                <div>
+                    <input type="checkbox" id="hr" name="hr" value="hr">
                     <label class="text" for="hr">HR</label>
-                    <input type="checkbox" id="sales" name="sales" value="sales" required>
+                    <input type="checkbox" id="sales" name="sales" value="sales">
                     <label class="text" for="sales">sales</label>
-                    <input type="checkbox" id="finance" name="finance" value="finance" required>
+                    <input type="checkbox" id="finance" name="finance" value="finance">
                     <label class="text" for="finance">finance</label>
-                    <input type="checkbox" id="engineer" name="engineer" value="engineer" required>
+                    <input type="checkbox" id="engineer" name="engineer" value="engineer">
                     <label class="text" for="engineer">engineer</label>
-                    <input type="checkbox" id="others" name="others" value="others" required>
+                    <input type="checkbox" id="others" name="others" value="others">
                     <label class="text" for="others">others</label>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <select id="Year" name="year" style="width: 100px;"> 
+                    <select id="Year" name="year" style="width: 100px;">
                         <option selected disabled hidden>Year</option>
                         <option value="1">2018</option>
                         <option value="2">2019</option>
@@ -158,11 +158,11 @@
             </div>
             <div class="row">
                 <div style="width: 70%; margin-left: 40px;">
-                    <button type="cancel" id="CancelButton">Cancel</button>
+                    <button class="common" type="cancel" id="CancelButton">Cancel</button>
                 </div>
                 <div>
-                    <button type="submit" id="submitbutton">Submit</button>
-                    <button type="Reset" id="Resetbutton">Reset</button>
+                    <button class="submit"type="submit" id="submitbutton">Submit</button>
+                    <button class="common" type="Reset" id="Resetbutton">Reset</button>
                 </div>
             </div>
         </form>
@@ -180,7 +180,8 @@
         border: 0px solid green;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: rgb(245, 242, 242);
+        width: 100%;
     }
 
     .logo {
@@ -188,7 +189,7 @@
         flex-direction: row;
         align-items: center;
         border: 0px solid green;
-        width: 100%;
+        width: 98%;
         padding-left: 25px;
     }
 
@@ -213,15 +214,16 @@
         justify-content: center;
         align-items: center;
         border: 0px solid green;
-        background-color: whitesmoke;
+        background-color: rgb(219, 214, 214);
+        width: 100%;
     }
 
     .form {
-        width: 50%;
+        width: fit-content;
         padding: 45px 60px;
         border: 0px solid;
         border-radius: 8px;
-        height: 76%;
+        height: 80%;
         background-color: white;
     }
 
@@ -243,15 +245,10 @@
         flex-direction: row;
         align-items: center;
         border: 0px solid green;
-        margin-top: 5%;
+        margin-top: 4%;
     }
 
-    .check {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border: 0px solid green;
-    }
+   
 
     input {
         flex: auto;
@@ -276,7 +273,20 @@
 
     button {
         font-size: 20px;
-
+}
+@media only screen and (max-width : 900px) {
+    .formdetails{
+        width: fit-content;
     }
+    .form{
+        width: fit-content;
+    }
+}
+.common:hover{
+    background-color: grey;
+}
+.submit:hover{
+    background-color: green;
+}
 </style>
 </html>
